@@ -321,10 +321,10 @@
 		keyup-threshold-microvolt = <1800000>;
 		poll-interval = <100>;
 		status = "okay";
-		button-recovery {
-			label = "Reset";
-			linux,code = <KEY_RESTART>;
-			press-threshold-microvolt = <1800>;
+		volumeup-key {
+			label = "volume up";
+			linux,code = <KEY_VOLUMEUP>;
+			press-threshold-microvolt = <1500000>;
 		};
 	};
 
@@ -378,22 +378,22 @@
 			gpio-controller;
 			#gpio-cells = <2>;
 
-			rk817_slppin_null: rk817-slppin-null {
+			rk817_slppin_null: rk817_slppin_null {
 				pins = "gpio_slp";
 				function = "pin_fun0";
 			};
 
-			rk817_slppin_slp: rk817-slppin-slp {
+			rk817_slppin_slp: rk817_slppin_slp {
 				pins = "gpio_slp";
 				function = "pin_fun1";
 			};
 
-			rk817_slppin_pwrdn: rk817-slppin-pwrdn {
+			rk817_slppin_pwrdn: rk817_slppin_pwrdn {
 				pins = "gpio_slp";
 				function = "pin_fun2";
 			};
 
-			rk817_slppin_rst: rk817-slppin-rst {
+			rk817_slppin_rst: rk817_slppin_rst {
 				pins = "gpio_slp";
 				function = "pin_fun3";
 			};
